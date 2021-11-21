@@ -1,0 +1,7 @@
+{
+  "name": "menuEletronico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
