@@ -6,13 +6,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Login', url: 'login', icon: 'home' },
+    { title: 'Home', url: 'home', icon: 'home' },
+    { title: 'Entrada', url: 'entrada', icon: 'restaurant' },
+    { title: 'Principal', url: 'principal', icon: 'pizza' },
+    { title: 'Sobremesas', url: 'sobremesa', icon: 'aperture' },
+    { title: 'Bebidas 18+', url: 'bebidas18mais', icon: 'beer' },
+    { title: 'Bebidas 18-', url: 'bebidas18menos', icon: 'cafe' },
+    { title: 'Sobre', url: 'sobre', icon: 'aperture' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  
   constructor() {}
+
+  darkOnOff(){
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    if(prefersDark.matches){
+      document.body.classList.toggle('dark');
+    }
+  }
 }

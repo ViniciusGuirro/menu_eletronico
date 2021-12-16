@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bebidas 18-</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Cliente: </ion-label>
+    <ion-input type="text" placeholder="Informe seu nome" clearInput></ion-input>
+  </ion-item>
+
+
+  <img class="animate__animated animate__fadeIn" src="../assets/bebidas2.png">
+
+    <ion-item>
+      <ion-label>Yakult</ion-label>
+      <ion-select multiple="true" placeholder="Selecione">
+        <ion-select-option value="1">Limão</ion-select-option>
+        <ion-select-option value="2">Gelo</ion-select-option>
+      </ion-select>
+      
+      <ion-label slot="end">{{valor}}</ion-label>
+      <ion-button id="yakult" (click)="menor()" style="font-size: 20px;" slot="end">-</ion-button>
+      <ion-button id="yakult" (click)="maior()" style="font-size: 20px;">+</ion-button>
+    </ion-item>
+
+  <ion-button color="success" expand="block" (click)="alerta()">Enviar Pedido</ion-button>
+
+</ion-content>

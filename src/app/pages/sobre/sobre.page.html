@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color = "medium">
+    <ion-title>Sobre</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div>
+    <ion-label>Digite uma frase: </ion-label>
+    <ion-input [(ngModel)]="maiuscula" placeholder="Frase"></ion-input>
+    <ion-button (click)="upper()">Deixar letra maiuscula</ion-button>
+    <br>
+    <br>
+  </div>
+
+  <div>
+    <ion-label>Digite uma frase: </ion-label>
+    <ion-input [(ngModel)]="antiga" placeholder="Frase"></ion-input>
+    <ion-button (click)="trocar()">Trocar frase</ion-button><br>
+    <br>
+    <br>
+  </div>
+
+  <div>
+    <ion-input [(ngModel)]="num1" placeholder="Numero 1"></ion-input>
+    <ion-input [(ngModel)]="num2" placeholder="Numero 2"></ion-input>
+    <ion-button (click)="resultado()">Comparar</ion-button><br>
+    <br>
+    <br>
+  </div>
+  
+  <div class="qrcode">
+    <div class="imagem" (click)="lerQR()">
+      <img src="assets/qrCode.png">
+    </div>
+  </div>
+
+
+</ion-content>

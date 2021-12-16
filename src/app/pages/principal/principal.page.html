@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>Principal</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="../assets/macarrao.png" class="d-block w-100" alt="1">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../assets/bebidas.PNG" class="d-block w-100" alt="2">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/yakult.PNG" class="d-block w-100" alt="3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <ion-item>
+    <ion-label>Cliente: </ion-label>
+    <ion-input type="text" placeholder="Informe seu nome" clearInput></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Selecione prato principal</option>
+        <option value="1">Arroz Branco</option>
+        <option value="2">Arroz e Feijão</option>
+        <option value="3">Macarrão</option>
+      </select>
+    </ion-item>
+
+    <ion-item>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Selecione Mistura</option>
+        <option value="1">Bife</option>
+        <option value="2">Frango</option>
+        <option value="3">Pernil</option>
+      </select>
+    </ion-item>
+
+    <ion-item>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Selecione salada</option>
+        <option value="1">Alface</option>
+        <option value="2">Tomate</option>
+        <option value="3">Rúcula</option>
+      </select>
+    </ion-item>
+  </ion-list>
+
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary" (click)="alerta()">Enviar Pedido</button>
+    <button type="button" class="btn btn-outline-success">Troca cor</button>
+  </div>
+</ion-content>

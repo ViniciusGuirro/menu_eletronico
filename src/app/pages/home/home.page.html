@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card color="tertiary">
+    <ion-slides pager="true" [options]="slideOpts">
+
+      <ion-slide>
+        <ion-img class="animate__animated animate__flipInX" src="../assets/principal2.jpg"></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="../assets/macarrao.png"></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="../assets/bebidas.PNG"></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="../assets/yakult.PNG"></ion-img>
+      </ion-slide>
+
+    </ion-slides>
+    <ion-card-content>
+      <ion-card-title>Bem vindo!</ion-card-title>
+      <h2>Aqui no restaurante Bibidi Bobidi Bu tudo é feito com a melhor receita: Bacon!</h2>
+    </ion-card-content>
+  </ion-card>
+
+    <ion-item>
+      <ion-icon name="moon" slot='end'></ion-icon>
+      <ion-label>Dark mode</ion-label>
+      <ion-toggle [ngModel]="darkMode" (ionChange)="trocaDark()"></ion-toggle>
+    </ion-item>
+
+</ion-content>
